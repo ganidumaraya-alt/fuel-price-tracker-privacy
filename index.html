@@ -67,6 +67,9 @@
   <h2>Information the app connects to</h2>
   <p>To show current prices, the app downloads fuel prices and Brent crude oil data from Google Cloud Firestore, a service provided by Google. Like any internet request, this reveals your device&rsquo;s IP address and basic connection details to Google, which handles them under its own <a href="https://policies.google.com/privacy">privacy policy</a>. I do not collect or store IP addresses, and I do not link these requests to you or build a profile about you.</p>
 
+  <h2>App verification (App Check)</h2>
+  <p>To make sure prices are only served to the genuine app and not to bots or copies that have been tampered with, the app uses Firebase App Check with Google Play Integrity. When the app asks for prices, Google&rsquo;s Play Integrity service checks that the request comes from an unmodified copy of the app on a genuine Android device, and the app receives a short-lived token that it sends along with the request. Google performs this check and receives limited device and app information for it, which it handles under its own <a href="https://policies.google.com/privacy">privacy policy</a>. I do not receive or store this information. I only see anonymous totals of verified and unverified requests.</p>
+
   <h2>Price alerts and notifications</h2>
   <p>If you set a price alert, the app checks fuel prices in the background, including when the app is closed, and sends you a notification when a price goes above or below a limit you set. The limits stay on your device. Alerts are checked against CEYPETCO prices.</p>
   <p>Notifications require your permission, which you can turn off at any time in your phone&rsquo;s settings. The app also asks to restart these checks after your phone reboots.</p>
@@ -86,6 +89,7 @@
   <h2>Third-party services</h2>
   <ul>
     <li><strong>Google Firebase / Cloud Firestore</strong> supplies the price data the app downloads. See Google&rsquo;s <a href="https://policies.google.com/privacy">privacy policy</a> and <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.</li>
+    <li><strong>Firebase App Check and Google Play Integrity</strong> check that requests come from the genuine app (see &ldquo;App verification&rdquo; above).</li>
   </ul>
   <p>The app does not include advertising networks, analytics services or any other third-party tracking tools.</p>
 
