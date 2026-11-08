@@ -57,7 +57,7 @@
   <h2>Information stored on your device</h2>
   <p>The app saves the following on your device only, so that it works quickly and offline:</p>
   <ul>
-    <li>your dark mode choice;</li>
+    <li>your appearance (light or dark), language and notification choices;</li>
     <li>whether you have already seen the welcome screen;</li>
     <li>the price alert limits you set, if any;</li>
     <li>the most recent fuel prices and Brent crude data it downloaded, which are also used by the home screen widget.</li>
@@ -72,14 +72,18 @@
 
   <h2>Price alerts and notifications</h2>
   <p>If you set a price alert, the app checks fuel prices in the background, including when the app is closed, and sends you a notification when a price goes above or below a limit you set. The limits stay on your device. Alerts are checked against CEYPETCO prices.</p>
-  <p>Notifications require your permission, which you can turn off at any time in your phone&rsquo;s settings. The app also asks to restart these checks after your phone reboots.</p>
+  <p>Price change notifications use Firebase Cloud Messaging, a service provided by Google. The app subscribes your phone to a general &ldquo;price updates&rdquo; topic for your chosen language, and Google delivers a message to everyone on that topic when CEYPETCO prices change. To make this work, Google assigns your phone an anonymous app installation identifier, which it handles under its own <a href="https://policies.google.com/privacy">privacy policy</a>. I do not receive or store this identifier, I cannot tell which phones are subscribed, and I cannot send anything to you individually. You can turn price change notifications off in the app&rsquo;s Settings, which also removes the subscription.</p>
+  <p>Notifications require your permission, which you can turn off at any time in your phone&rsquo;s settings. The app also asks to restart price alert checks after your phone reboots.</p>
+
+  <h2>Sharing</h2>
+  <p>If you tap Share, the app puts the current prices into your phone&rsquo;s standard share sheet and you choose where they go. The app does not send them anywhere itself and does not see which app or person you pick.</p>
 
   <h2>Permissions used by the app</h2>
   <table>
     <thead><tr><th>Permission</th><th>Why it is used</th></tr></thead>
     <tbody>
       <tr><td>Internet</td><td>To download fuel prices and Brent crude data.</td></tr>
-      <tr><td>Notifications</td><td>To tell you when a price alert you set is triggered.</td></tr>
+      <tr><td>Notifications</td><td>To tell you when prices change and when a price alert you set is triggered.</td></tr>
       <tr><td>Run at startup</td><td>To restart price alert checks after your phone reboots.</td></tr>
       <tr><td>Vibration</td><td>For small touch feedback when you use the app.</td></tr>
     </tbody>
@@ -89,6 +93,7 @@
   <h2>Third-party services</h2>
   <ul>
     <li><strong>Google Firebase / Cloud Firestore</strong> supplies the price data the app downloads. See Google&rsquo;s <a href="https://policies.google.com/privacy">privacy policy</a> and <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.</li>
+    <li><strong>Firebase Cloud Messaging</strong> delivers price change notifications (see &ldquo;Price alerts and notifications&rdquo; above).</li>
     <li><strong>Firebase App Check and Google Play Integrity</strong> check that requests come from the genuine app (see &ldquo;App verification&rdquo; above).</li>
   </ul>
   <p>The app does not include advertising networks, analytics services or any other third-party tracking tools.</p>
@@ -102,7 +107,7 @@
   <h2>Your choices</h2>
   <ul>
     <li>Delete your price alerts in the app at any time.</li>
-    <li>Turn off notifications for the app in your phone&rsquo;s settings.</li>
+    <li>Turn off price change notifications in the app&rsquo;s Settings, or turn off notifications for the app in your phone&rsquo;s settings.</li>
     <li>Clear the app&rsquo;s data in your phone&rsquo;s settings, or uninstall the app, to remove everything it has stored on your device.</li>
   </ul>
 
