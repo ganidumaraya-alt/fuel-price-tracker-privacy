@@ -40,7 +40,7 @@
 <body>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="muted">Fuel Price Tracker &middot; Last updated: 8 November 2026</p>
+  <p class="muted">Fuel Price Tracker &middot; Last updated: 11 November 2026</p>
 
   <p>This policy explains how the Fuel Price Tracker app for Android (&ldquo;the app&rdquo;) handles information. The app is made by Ganidu Madushan Balasuriya (&ldquo;I&rdquo;, &ldquo;me&rdquo;, &ldquo;the developer&rdquo;).</p>
 
@@ -49,7 +49,7 @@
     <ul>
       <li>The app does not ask you to create an account.</li>
       <li>It does not collect your name, email address, phone number, location, contacts or any other personal information.</li>
-      <li>It has no advertising, no analytics and no crash-reporting tools.</li>
+      <li>It has no advertising. It sends anonymous crash reports and usage statistics, which you can turn off in Settings.</li>
       <li>The settings you choose stay on your device.</li>
     </ul>
   </div>
@@ -75,6 +75,14 @@
   <p>Price change notifications use Firebase Cloud Messaging, a service provided by Google. The app subscribes your phone to a general &ldquo;price updates&rdquo; topic for your chosen language, and Google delivers a message to everyone on that topic when CEYPETCO prices change. To make this work, Google assigns your phone an anonymous app installation identifier, which it handles under its own <a href="https://policies.google.com/privacy">privacy policy</a>. I do not receive or store this identifier, I cannot tell which phones are subscribed, and I cannot send anything to you individually. You can turn price change notifications off in the app&rsquo;s Settings, which also removes the subscription.</p>
   <p>Notifications require your permission, which you can turn off at any time in your phone&rsquo;s settings. The app also asks to restart price alert checks after your phone reboots.</p>
 
+  <h2>Crash reports and usage statistics</h2>
+  <p>To find and fix problems and to see which features are used, the app uses Firebase Crashlytics and Firebase Analytics, services provided by Google.</p>
+  <ul>
+    <li><strong>Crash reports:</strong> if the app crashes, a report is sent containing technical details: your device model, Android version, app version, and what the app was doing when it stopped.</li>
+    <li><strong>Usage statistics:</strong> anonymous events such as which screens are opened, that a price picture was shared, or which language or appearance was chosen. They contain no text you typed.</li>
+  </ul>
+  <p>Both use a random app installation identifier that is not linked to your name, email address, location or any other personal information. The app does not use the Android advertising ID and does not use this data for advertising. Google handles the data under its own <a href="https://policies.google.com/privacy">privacy policy</a> and <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>. You can turn both off at any time in the app under Settings &gt; Privacy &gt; Crash reports &amp; usage statistics.</p>
+
   <h2>Sharing</h2>
   <p>If you tap Share, the app puts the current prices into your phone&rsquo;s standard share sheet and you choose where they go. The app does not send them anywhere itself and does not see which app or person you pick.</p>
 
@@ -95,8 +103,9 @@
     <li><strong>Google Firebase / Cloud Firestore</strong> supplies the price data the app downloads. See Google&rsquo;s <a href="https://policies.google.com/privacy">privacy policy</a> and <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.</li>
     <li><strong>Firebase Cloud Messaging</strong> delivers price change notifications (see &ldquo;Price alerts and notifications&rdquo; above).</li>
     <li><strong>Firebase App Check and Google Play Integrity</strong> check that requests come from the genuine app (see &ldquo;App verification&rdquo; above).</li>
+    <li><strong>Firebase Crashlytics and Firebase Analytics</strong> provide crash reports and anonymous usage statistics (see &ldquo;Crash reports and usage statistics&rdquo; above).</li>
   </ul>
-  <p>The app does not include advertising networks, analytics services or any other third-party tracking tools.</p>
+  <p>The app does not include advertising networks or any other third-party tracking tools.</p>
 
   <h2>Links to other websites</h2>
   <p>Some links in the app open in your browser, for example to CEYPETCO, the U.S. Energy Information Administration or the developer&rsquo;s website. These sites have their own privacy policies, and I am not responsible for how they handle information.</p>
@@ -107,6 +116,7 @@
   <h2>Your choices</h2>
   <ul>
     <li>Delete your price alerts in the app at any time.</li>
+    <li>Turn off crash reports and usage statistics in the app&rsquo;s Settings.</li>
     <li>Turn off price change notifications in the app&rsquo;s Settings, or turn off notifications for the app in your phone&rsquo;s settings.</li>
     <li>Clear the app&rsquo;s data in your phone&rsquo;s settings, or uninstall the app, to remove everything it has stored on your device.</li>
   </ul>
